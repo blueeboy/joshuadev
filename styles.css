@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(15, 15, 23);
+}
+
+header {
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 6em;
+  height: 10vh;
+  border-bottom: 1px solid #1d1d22;
+}
+
+nav .logo img {
+  width: 120px;
+}
+
+nav .links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em;
+  font-size: 1em;
+  position: relative;
+  z-index: 1;
+}
+
+nav .links a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: #0008f2;
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+nav .links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3em;
+  padding: 0em 6em;
+  height: 90vh;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 5em;
+  line-height: 1;
+  margin: -30px 0;
+}
+
+.hero-content p {
+  font-size: 1em;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.hero img {
+  width: 40%;
+  height: auto;
+}
+
+.buttons {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #3d405b;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  padding: 1em 1em;
+  width: 25%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttons .ctc-btn {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.buttons .ctc-btn:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  right: -15px;
+  transition: 0.5s;
+}
+
+.buttons:hover .ctc-btn {
+  padding-right: 15px;
+}
+
+.buttons:hover .ctc-btn:after {
+  opacity: 1;
+  right: 0;
+}
+
+.projects {
+  padding: 6em 6em;
+  color: #fff;
+}
+
+.projects .title {
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+}
+
+.projects .title h1 {
+  font-size: 3em;
+  margin: 0.3em 0;
+}
+
+.blue {
+  width: 10px;
+  height: 10px;
+  background-color: #0008f2;
+  margin-top: 30px;
+}
+
+.project-tab {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2em;
+  color: #737373;
+}
+.project-tab-1 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2em;
+  color: #737373;
+  margin: 2em 0;
+}
+
+.project-tab a,
+.project-tab-1 a {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.project-tab p,
+.project-tab-1 p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.project-tab img,
+.project-tab-1 img {
+  width: 100%;
+  height: 50vh;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-tab img:hover,
+.project-tab-1 img:hover {
+  transform: translateY(-5px);
+}
+
+.project-tab .project-name img,
+.project-tab-1 .project-name img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  align-self: center;
+  align-content: center;
+}
+
+/* EXPERIENCE */
+
+.experience {
+  padding: 0em 6em;
+  color: #fff;
+}
+
+.experience .title {
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+}
+
+.experience .title h1 {
+  font-size: 3em;
+  margin: 0.3em 0;
+}
+
+.exp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  border-radius: 0.5em;
+  color: #737373;
+  padding: 2em 0;
+}
+
+.exp-container > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2em;
+}
+
+.exp-container div .name {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.exp-container div .name .square {
+  width: 15px;
+  height: 15px;
+  background-color: #0008f2;
+}
+
+.exp-container div .name h2 {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.exp-container div .content h2 {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* SKILLS */
+
+.skills {
+  padding: 6em 6em;
+  color: #fff;
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  justify-content: center;
+  color: #fff;
+}
+
+.skills .title {
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+}
+
+.skills .title h1 {
+  font-size: 3em;
+  margin: 0.3em 0;
+}
+
+.skill-card {
+  background: #0f183a;
+  border-radius: 20px;
+  padding: 1em;
+  text-align: center;
+  color: white;
+  /* width: 200px; */
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); /* Blue glow */
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  margin: 1em 0;
+  background-color: #fff;
+}
+
+.circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+}
+
+svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke: #1a1a3d;
+  stroke-width: 10;
+}
+
+circle.progress {
+  stroke: #1f6bff;
+  stroke-dasharray: 314; /* 2πr = 2×3.14×50 */
+  stroke-dashoffset: 314;
+  transition: stroke-dashoffset 1.5s ease-out;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+}
+
+
+/* ABOUT */
+
+.about {
+  padding: 0em 6em;
+  color: #fff;
+}
+
+.about .title {
+  display: flex;
+  align-items: center;
+  gap: 0.1em;
+}
+
+.about .title h1 {
+  font-size: 3em;
+  margin: 0.3em 0;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  border-radius: 0.5em;
+  color: #737373;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #1d1d22;
+  color: #fff;
+  padding: 1em 6em;
+  margin: 6em 0 0 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links .links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1em 0 0;
+  font-size: 1em;
+}
+
+.footer-links .links a:hover {
+  color: #0008f2;
+}
+/* From Uiverse.io by MijailVillegas */
+.card {
+  max-width: fit-content;
+  border-radius: 15px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: 0.5s;
+}
+
+.card:hover {
+  animation: ease-out 5s;
+}
+
+.card ul {
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.card ul li {
+  cursor: pointer;
+}
+
+.svg {
+  transition: all 0.3s;
+  /* if you find some problems change w - h : 30px*/
+  padding: 1rem;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  color: #fff;
+  fill: currentColor;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.card ul li:hover .svg {
+  color: #0008f2;
+}
+
+.text {
+  opacity: 0;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.3s;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 9999;
+  box-shadow: -5px 0 1px rgba(153, 153, 153, 0.2),
+    -10px 0 1px rgba(153, 153, 153, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+/*isometric prooyection*/
+.iso-pro {
+  transition: 0.5s;
+}
+.iso-pro:hover a > .svg {
+  transform: translate(15px, -15px);
+  border-radius: 100%;
+}
+
+.iso-pro:hover .text {
+  opacity: 1;
+  transform: translate(25px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svg {
+  transform: translate(5px, -5px);
+}
+
+.iso-pro span {
+  opacity: 0;
+  position: absolute;
+  color: #1877f2;
+  border-color: #1877f2;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5), 0 5px 5px rgba(0, 0, 0, 0.164);
+  border-radius: 50%;
+  transition: all 0.3s;
+  height: 60px;
+  width: 60px;
+}
+
+.iso-pro:hover span {
+  opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.iso-pro:hover span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.iso-pro:hover span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+footer .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+footer .copyright .buttons {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #3d405b;
+  border: none;
+  text-align: center;
+  font-size: 1em;
+  padding: 1em 1em;
+  width: 35%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+footer .copyright .buttons .ctc-btn {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+footer .copyright .buttons .ctc-btn:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  right: -15px;
+  transition: 0.5s;
+}
+
+footer .copyright .buttons:hover .ctc-btn {
+  padding-right: 15px;
+}
+
+footer .copyright .buttons:hover .ctc-btn:after {
+  opacity: 1;
+  right: 0;
+}
