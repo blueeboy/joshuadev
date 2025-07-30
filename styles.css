@@ -433,7 +433,6 @@ footer {
 
 .svg {
   transition: all 0.3s;
-  /* if you find some problems change w - h : 30px*/
   padding: 1rem;
   height: 20px;
   width: 20px;
@@ -557,4 +556,287 @@ footer .copyright .buttons:hover .ctc-btn {
 footer .copyright .buttons:hover .ctc-btn:after {
   opacity: 1;
   right: 0;
+}
+
+.hamburger {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .buttons {
+    width: 40%;
+  }
+
+  footer .copyright .buttons {
+    width: 40%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 1em;
+  }
+  .hamburger {
+    font-size: 1.5rem;
+    font-weight: 200;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 1em;
+    z-index: 1;
+  }
+
+  /* Menu Styles */
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100%;
+    background-color: black;
+    color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 10;
+  }
+  .menu-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .close {
+    font-size: 2.5rem;
+    background: none;
+    color: #fff;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  .menu img {
+    width: 100px;
+    display: block;
+  }
+
+  .menu-links {
+    list-style: none;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    gap: 3em;
+  }
+
+  .menu-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+  }
+
+  .menu-links a:hover {
+    background-color: #0008f2;
+    transition: 0.5s ease-in-out;
+    color: #fff;
+  }
+
+  /* Show menu when active */
+  .show {
+    right: 0;
+  }
+
+  a.menu-active {
+    border-radius: 10px;
+    color: #fff;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    padding: 6em 1em;
+    height: 90vh;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2em;
+    color: #fff;
+    padding: 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 3em;
+  }
+  
+  .hero-content p {
+    font-size: 1em;
+  }
+  
+  .hero img {
+    width: 80%;
+    height: auto;
+  }
+  
+  .buttons {
+    width: 30%;
+  }
+
+  .projects {
+    padding: 6em 1em;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  
+  .projects .title h1 {
+    font-size: 2em;
+    margin: 0 0;
+  }
+  
+  .project-tab {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+  .project-tab-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6em;
+  }
+
+  .experience {
+    padding: 0em 1em;
+    color: #fff;
+  }
+  
+  .experience .title h1 {
+    font-size: 2em;
+    margin: 0 0;
+  }
+  
+  .exp-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    border-radius: 0.5em;
+    color: #737373;
+    padding: 2em 1em;
+  }
+  
+  .exp-container > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .skills {
+    padding: 6em 1em;
+    color: #fff;
+  }
+  
+  #skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em 0;
+  }
+  
+  .skills .title {
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+  }
+  
+  .skills .title h1 {
+    font-size: 2em;
+    margin: 0 0;
+  }
+
+  .about {
+    padding: 0em 1em;
+    color: #fff;
+  }
+  
+  .about .title h1 {
+    font-size: 2em;
+    margin: 0 0;
+  }
+  
+  .about-container {
+    padding: 1em 0;
+  }
+
+  footer {
+    padding: 2em 0em;
+    margin: 6em 0 0 0;
+    text-align: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-links .links a {
+    font-size: 1em;
+  }
+  
+  footer .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .copyright .buttons {
+    width: 40%;
+  }
+  
+}
+
+@media (max-width: 640px) {
+  .buttons {
+    width: 40%;
+  }
+  footer .copyright .buttons {
+    width: 40%;
+  }
 }
