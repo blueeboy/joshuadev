@@ -374,6 +374,7 @@ circle.progress {
   gap: 0.75em;
   border-radius: 0.5em;
   color: #737373;
+  text-align: justify;
 }
 
 /* FOOTER */
